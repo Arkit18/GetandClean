@@ -48,7 +48,7 @@ names(data1) <- gsub("angle", "Angle ", names(data1))
 
 #Step5: Taking average for all columns and summarizing. 
 
-final_data <- group_by(data1, data1$Subject, data1$Activity)
+final_data <- group_by(data1, Subject, Activity)
 final_data <- summarise_all(final_data, funs(mean))
 final_data <- final_data[, -c(3,4)]
 
